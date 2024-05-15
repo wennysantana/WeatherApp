@@ -9,14 +9,17 @@ const CitySelector = ({ onCityChange }) => {
     "Vancouver,CA",
     "Yakutsk,RU",
   ];
+
   return (
-    <select onChange={(e) => onCityChange(e.target.value)}>
-      {cities.map((city) => (
-        <option key={city} value={city}>
-          {city.split(",")[0]}
-        </option>
-      ))}
-    </select>
+    <div>
+      <select onChange={(e) => onCityChange(e.target.value)}>
+        {cities.map((city, index) => (
+          <option key={index} value={city}>
+            {city.split(",")[0]}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
 

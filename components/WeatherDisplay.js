@@ -1,13 +1,13 @@
-import React from 'react';
-import WeatherIcon from './WeatherIcon';
+import React from "react";
+import WeatherIcon from "./WeatherIcon";
 
 const WeatherDisplay = ({ weatherData }) => {
   if (!weatherData) return null;
 
   const { location, current } = weatherData;
   const { temp_c, condition, wind_kph, humidity } = current;
-  const sunrise = '5:14 AM'; // Placeholder: substitua pelos dados reais
-  const sunset = '7:25 PM';
+  const sunrise = "5:14 AM"; // Placeholder
+  const sunset = "7:25 PM"; // Placeholder
 
   return (
     <div className="weather-display">
